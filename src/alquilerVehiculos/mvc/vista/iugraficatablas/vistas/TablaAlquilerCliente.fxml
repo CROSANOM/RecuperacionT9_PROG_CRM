@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alquilerVehiculos.mvc.vista.iugraficatablas.controladores.vista.ControladorTablaAlquilerCliente">
+   <children>
+      <Label fx:id="lb" prefHeight="34.0" prefWidth="316.0" text="LISTADO DE ALQUILER POR CLIENTES ">
+         <VBox.margin>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </VBox.margin>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../imagenes/ImagClientes.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <GridPane alignment="TOP_RIGHT" prefHeight="70.0" prefWidth="401.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="145.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="459.0" minWidth="10.0" prefWidth="275.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <VBox.margin>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </VBox.margin>
+         <children>
+            <Label text="NIF" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="gpFichaCliente" layoutX="10.0" layoutY="10.0" text="Nombre">
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="tfNombre" prefHeight="22.0" prefWidth="275.0" GridPane.columnIndex="1" />
+            <TextField fx:id="tfDni" alignment="TOP_LEFT" prefHeight="49.0" prefWidth="279.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tvAlquilerCliente" prefHeight="218.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="tcMatricula" prefWidth="88.0" text="Matricula" />
+          <TableColumn fx:id="tcTipo" prefWidth="112.0" text="Tipo" />
+            <TableColumn fx:id="tcMarca" prefWidth="73.0" text="Marca" />
+            <TableColumn fx:id="tcModelo" prefWidth="75.0" text="Modelo" />
+            <TableColumn fx:id="tfFecha" prefWidth="75.0" text="Fechas" />
+            <TableColumn fx:id="tcDias" prefWidth="75.0" text="Dias" />
+        </columns>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </TableView>
+   </children>
+</VBox>

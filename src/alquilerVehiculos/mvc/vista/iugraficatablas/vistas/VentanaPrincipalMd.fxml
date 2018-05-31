@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <items>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label alignment="TOP_CENTER" prefHeight="560.0" prefWidth="754.0" text="ALQUILER DE VEHICULOS " AnchorPane.bottomAnchor="-36.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-55.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets bottom="9.0" left="9.0" right="9.0" top="9.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../imagenes/imagAlquiler.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TabPane layoutX="23.0" layoutY="64.0" prefHeight="443.0" prefWidth="661.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="CLIENTES ">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="289.0" prefWidth="567.0">
+                           <children>
+                              <TableView layoutX="14.0" layoutY="29.0" prefHeight="245.0" prefWidth="197.0">
+                                <columns>
+                                  <TableColumn prefWidth="83.46647262573242" text="Nombre " />
+                                  <TableColumn prefWidth="140.53353881835938" text="DNI" />
+                                </columns>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </TableView>
+                              <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="141.0" text="TABLA DE CLIENTES ">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <RadioButton layoutX="267.0" layoutY="20.0" mnemonicParsing="false" text="Añadir Cliente" />
+                              <RadioButton layoutX="270.0" layoutY="191.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="127.0" text="Buscar Cliente " />
+                              <TextField disable="true" layoutX="380.0" layoutY="226.0" prefHeight="27.0" prefWidth="158.0" />
+                              <Label layoutX="296.0" layoutY="231.0" text="Insertar Dni " />
+                              <GridPane disable="true" layoutX="232.0" layoutY="57.0" prefHeight="143.0" prefWidth="331.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="96.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="177.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="24.0" minHeight="0.0" prefHeight="11.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Nombre " />
+                                    <TextField prefHeight="27.0" prefWidth="173.0" GridPane.columnIndex="1" />
+                                    <Label text="Dirección" GridPane.rowIndex="1" />
+                                    <Label text="Codigo Postal" GridPane.rowIndex="2" />
+                                    <Label prefHeight="17.0" prefWidth="40.0" text="DNI" GridPane.rowIndex="3" />
+                                    <TextField prefHeight="27.0" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField prefHeight="27.0" prefWidth="172.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField prefHeight="27.0" prefWidth="184.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="VEHICULOS ">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="399.0" prefWidth="651.0">
+                           <children>
+                              <TableView layoutX="14.0" layoutY="49.0" prefHeight="219.0" prefWidth="161.0">
+                                <columns>
+                                    <TableColumn prefWidth="77.0" text="Matricula" />
+                                  <TableColumn prefWidth="100.0" text="Cliente" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="14.0" layoutY="17.0" prefHeight="17.0" prefWidth="148.0" text="TABLA DE VEHICULOS ">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <RadioButton disable="true" layoutX="297.0" layoutY="61.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="93.0" text="DE_CARGA" />
+                              <RadioButton disable="true" layoutX="200.0" layoutY="61.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="93.0" text="TURISMO" />
+                              <CheckBox layoutX="218.0" layoutY="8.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="82.0" text="Añadir " />
+                              <RadioButton disable="true" layoutX="399.0" layoutY="61.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="93.0" text="AUTOBUS" />
+                              <Label disable="true" layoutX="245.0" layoutY="40.0" prefHeight="18.0" prefWidth="225.0" text="SELECCIONE  TIPO DE VEHICULO" AnchorPane.bottomAnchor="231.0" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="40.0" />
+                              <GridPane disable="true" layoutX="218.0" layoutY="51.0" prefHeight="199.0" prefWidth="332.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="218.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="120.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="219.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="46.0" minHeight="0.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="46.0" minHeight="0.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="46.0" minHeight="0.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="46.0" minHeight="0.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="46.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Matricula" />
+                                    <Label text="Marca" GridPane.rowIndex="1" />
+                                    <Label text="Modelo" GridPane.rowIndex="4" />
+                                    <Label text="Cilindrada" GridPane.rowIndex="2" />
+                                    <Label prefHeight="32.0" prefWidth="92.0" text="Numero Plazas" GridPane.rowIndex="3" />
+                                    <Label text="PMA" GridPane.rowIndex="5" />
+                                    <TextField editable="false" prefHeight="18.0" prefWidth="102.0" GridPane.columnIndex="1" />
+                                    <TextField prefHeight="17.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField prefHeight="17.0" prefWidth="140.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextFlow prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <children>
+                                          <TextField prefHeight="27.0" prefWidth="215.0" />
+                                       </children>
+                                    </TextFlow>
+                                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Button mnemonicParsing="false" text="Aceptar" GridPane.rowIndex="6" />
+                                    <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="Cancelar" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <GridPane.margin>
+                                          <Insets bottom="70.0" left="70.0" right="70.0" top="70.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </GridPane>
+                              <CheckBox layoutX="315.0" layoutY="7.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="84.0" text="Buscar " />
+                              <CheckBox layoutX="433.0" layoutY="8.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="119.0" text="Eliminar" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="ALQUILERES">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="289.0" prefWidth="523.0">
+                           <children>
+                              <TableView layoutX="7.0" layoutY="22.0" prefHeight="346.0" prefWidth="232.0">
+                                <columns>
+                                  <TableColumn prefWidth="52.0" text="Fecha " />
+                                  <TableColumn prefWidth="52.0" text="Dias" />
+                                    <TableColumn prefWidth="71.0" text="Vehiculo" />
+                                    <TableColumn prefWidth="59.0" text="Cliente" />
+                                </columns>
+                              </TableView>
+                              <RadioButton layoutX="357.0" layoutY="22.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="146.0" text="Abrir Alquiler" />
+                              <GridPane disable="true" layoutX="286.0" layoutY="149.0" prefHeight="162.0" prefWidth="297.0" AnchorPane.bottomAnchor="99.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="112.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="144.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="96.0" text="Insertar DNI">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField prefHeight="20.0" prefWidth="147.0" GridPane.columnIndex="1" />
+                                    <Label prefHeight="17.0" prefWidth="120.0" text="lnsertar Matricula" GridPane.rowIndex="1" />
+                                    <TextField prefHeight="20.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="49.0" text="OK " GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <Button alignment="CENTER" layoutX="15.0" layoutY="84.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="81.0" text="Cancelar" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets bottom="40.0" left="40.0" right="30.0" top="40.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </GridPane>
+                              <RadioButton layoutX="358.0" layoutY="51.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="147.0" text="Cerrar Alquiler" />
+                              <MenuButton layoutX="257.0" layoutY="327.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="285.0" text="Listar Alquiler">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Abiertos" />
+                                  <MenuItem mnemonicParsing="false" text="Cerrados" />
+                                </items>
+                              </MenuButton>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>
